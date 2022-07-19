@@ -11,3 +11,6 @@ export const range = (from, to) => new Proxy({}, {
     }
   }
 });
+
+export const zip = (aList, bList) =>
+  (aList.length < bList.length ? aList : bList).map((_, index) => [aList[index], bList[index]])
